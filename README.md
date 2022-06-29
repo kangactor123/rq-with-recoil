@@ -1,4 +1,9 @@
-# tech
+# Tech
+
+- React with Typescript
+- React-Query
+- Recoil
+- 스타일을 위한 styled-components (사실 여기엔 의미없음)
 
 ```
 npm install recoil
