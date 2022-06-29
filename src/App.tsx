@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useQuery } from "react-query";
+import { useSetRecoilState } from "recoil";
+import { getProjectId } from "./common/api";
+import { projectId } from "./common/atom";
+import { KEY_PROJECT_ID } from "./common/key";
+import FirstList from "./component/FirstList";
+import InputData from "./component/InputData";
+import SecondList from "./component/SecondList";
 
 function App() {
+  const { data } = useQuery(KEY_PROJECT_ID, getProjectId);
+  const setProjectId = useSetRecoilState(projectId);
+
+  if (data) {
+    setProjectId(data);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>ProjectId is {data ?? "null"}</h1>
+      <FirstList />
+      <SecondList />
+      <InputData />
+    </>
   );
 }
 
