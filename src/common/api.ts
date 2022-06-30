@@ -2,12 +2,12 @@ import axios from "axios";
 import { IList } from "./type";
 
 export async function getList() {
-  const { data } = await axios.get("http://localhost:3001/list1");
+  const { data } = await axios.get("http://localhost:3001/list");
   return data;
 }
 
 export const postPersonInList = (data: IList) => {
-  return axios.post("http://localhost:3001/list2", {
+  return axios.post("http://localhost:3001/list", {
     name: data.name,
     age: data.age,
     id: Date.now(),
@@ -17,7 +17,7 @@ export const postPersonInList = (data: IList) => {
 export async function getProjectId() {
   const {
     data: { id },
-  } = await axios.get("http://localhost:3001/project3");
+  } = await axios.get("http://localhost:3001/project");
   return id;
 }
 
