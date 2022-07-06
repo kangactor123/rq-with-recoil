@@ -23,9 +23,18 @@ function FirstList() {
     //   },
     // }
   );
-  const { invalidateQueries } = useQueryClient();
+
+  // const { invalidateQueries } = useQueryClient();
+  const queryCache = useQueryClient();
   const { mutate, isError: isMutateError } = useMutation(postPersonInList, {
-    onSuccess: () => invalidateQueries(KEY_LIST),
+    onSuccess: () => {
+      console.log("success");
+      queryCache.invalidateQueries(KEY_LIST);
+      // invalidateQueries(KEY_LIST);
+    },
+    onError: (error) => {
+      console.log(error);
+    },
   });
 
   const location = useLocation();
