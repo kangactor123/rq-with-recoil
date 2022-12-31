@@ -1,5 +1,5 @@
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from "react";
-import { useMutation, useQueryClient } from "react-query";
 import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import { patchProjectId } from "../common/api";
@@ -21,7 +21,7 @@ function InputData() {
     onSuccess: (data) => {
       // mutation 성공 후 해당 서버 데이터를 패칭하지 않고도 데이터를 바꿔줄 수 있음
       // cached 된 쿼리의 데이터를 즉시 변경해줌
-      setQueryData(KEY_PROJECT_ID, data);
+      setQueryData([KEY_PROJECT_ID], data);
     },
   });
 

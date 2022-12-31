@@ -1,13 +1,12 @@
-import { useMutation, useQuery } from "react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { Link, useLocation } from "react-router-dom";
 import { getList, postPersonInList } from "../common/api";
 import { KEY_LIST } from "../common/key";
 import { IList } from "../common/type";
 import { MAIN_PAGE_PATH } from "../Router";
-import { Wrapper } from "./FirstList";
 
 function SecondList() {
-  const { data, isLoading, isError } = useQuery<IList[]>(KEY_LIST, getList);
+  const { data, isLoading, isError } = useQuery<IList[]>([KEY_LIST], getList);
   const { mutate, isError: isMutateError } = useMutation(postPersonInList);
   const location = useLocation();
 
@@ -21,7 +20,7 @@ function SecondList() {
   if (isLoading) return <div>isLoading...</div>;
 
   return !isError ? (
-    <Wrapper>
+    <div>
       <h1>this is SecondList</h1>
       <ul>
         {data?.map((item, index) => (
@@ -38,7 +37,7 @@ function SecondList() {
       <button onClick={handleClick}>Add Second Person</button>
       <br />
       {location.pathname !== MAIN_PAGE_PATH && <Link to="/">goMain</Link>}
-    </Wrapper>
+    </div>
   ) : null; // Error 시 컴포넌트
 }
 
