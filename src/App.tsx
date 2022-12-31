@@ -1,4 +1,4 @@
-import { useQueryClient } from "react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { useRecoilState } from "recoil";
 import { errorAtom } from "./common/atom";
 import Router from "./Router";

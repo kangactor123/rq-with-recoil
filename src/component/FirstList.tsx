@@ -1,4 +1,4 @@
-import { useMutation, useQuery, useQueryClient } from "react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { getList, postPersonInList } from "../common/api";
@@ -15,7 +15,7 @@ export const Wrapper = styled.div``;
 function FirstList() {
   // const { data, isLoading } = useQuery<IList[], Error, number>( // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
   const { data, isLoading } = useQuery<IList[], Error>( // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
-    KEY_LIST,
+    [KEY_LIST],
     getList
     // {
     //   select: (data) => {
@@ -29,7 +29,7 @@ function FirstList() {
   const { mutate, isError: isMutateError } = useMutation(postPersonInList, {
     onSuccess: () => {
       console.log("success");
-      queryCache.invalidateQueries(KEY_LIST);
+      queryCache.invalidateQueries([KEY_LIST]);
       // invalidateQueries(KEY_LIST);
     },
     onError: (error) => {

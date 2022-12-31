@@ -1,5 +1,7 @@
 # Blog
+
 <a href="https://tech.osci.kr/2022/07/13/react-query/">React-Query 도입을 위한 고민 (feat. Recoil)</a>
+
 <p>>> 해당 글은 react-query 3.39.1 버전을 기준으로 작성된 글입니다.</p>
 
 # Tech
@@ -9,8 +11,6 @@
 - Recoil
 - 스타일을 위한 styled-components (사실 여기엔 의미없음..)
 
-<p>>> 설치된 라이브러리 또한 3.39.1 버전이며, 현재 버전은 4.20.7 버전입니다.</p>
- 
 ```
 npm install recoil
 npm install react-query
@@ -18,10 +18,23 @@ npm install styled-components
 npm i --save-dev @types/styled-components
 ```
 
+# React Query v4 update
+
+```
+yarn remove react-query
+yarn add @tanstack/react-query
+yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-client
+```
+
+## 변경점
+
+- 패키지가 react-query 에서 @tanstack/react-query 로 변경되었습니다.
+- 기존의 persist 를 위한 플러그인이 실험모드 에서 안정화 모드의 플러그인으로 변경되었습니다.
+  <a href="https://tanstack.com/query/v4/docs/react/plugins/createSyncStoragePersister">>플러그인 문서</a>
+
 ## 사전환경설정
 
 - 해당 앱은 간단히 JSON.server 을 띄어서 테스트 했습니다.
-
 
 ### JSON.server 설정방법
 
