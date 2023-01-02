@@ -26,7 +26,7 @@ yarn add @tanstack/react-query
 yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-client
 ```
 
-## 변경점
+## 레포지토리 변경점 (2022-12-31 기준)
 
 - 패키지가 react-query 에서 @tanstack/react-query 로 변경되었습니다.
 - 기존의 persist 를 위한 플러그인이 실험모드 에서 안정화 모드의 플러그인으로 변경되었습니다.
