@@ -14,6 +14,7 @@ export const Wrapper = styled.div``;
 function FirstList() {
   const location = useLocation();
   const queryClient = useQueryClient();
+
   // const { data, isLoading } = useQuery<IList[], Error, number>( // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
   const { data, isLoading } = useQuery<IList[], Error>( // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
     KEY_LIST,

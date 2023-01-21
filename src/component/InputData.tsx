@@ -12,14 +12,15 @@ const Wrapper = styled.div`
 
 function InputData() {
   const [val, setVal] = useState(0);
-  const client = useQueryClient();
+  const queryClient = useQueryClient();
   const setProjectId = useSetRecoilState(projectId);
   const { mutate, isSuccess } = useMutation(patchProjectId, {
-    // onSuccess: () => queryInvalidate(KEY_PROJECT),
     onSuccess: (data) => {
-      // mutation 성공 후 해당 서버 데이터를 패칭하지 않고도 데이터를 바꿔줄 수 있음
+      // queryClient.invalidateQueries(KEY_PROJECT)
+
+      // setQueryData: mutation 성공 후 해당 서버 데이터를 패칭하지 않고도 데이터를 바꿔줄 수 있음
       // cached 된 쿼리의 데이터를 즉시 변경해줌
-      client.setQueryData(KEY_PROJECT, data);
+      queryClient.setQueryData(KEY_PROJECT, data);
     },
   });
 
