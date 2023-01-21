@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { KEY_ERROR, KEY_PROJECT_ID } from "./key";
+import { KEY_PROJECT_ID } from "./key";
 import { ProjectId } from "./type";
 
 const localStorageEffect =
@@ -21,10 +21,4 @@ const localStorageEffect =
 export const projectId = atom<ProjectId>({
   key: KEY_PROJECT_ID,
   effects: [localStorageEffect(KEY_PROJECT_ID)],
-});
-
-// 간단히 에러 메세지를 담는다!
-export const errorAtom = atom({
-  key: KEY_ERROR,
-  default: [] as string[],
 });
