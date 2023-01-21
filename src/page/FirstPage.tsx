@@ -1,10 +1,6 @@
-import FirstList from "../component/FirstList";
+import { FirstList } from "src/component";
 
 function FirstPage() {
-  return (
-    <>
-      <FirstList />
-    </>
-  );
+  return <FirstList />;
 }
 export default FirstPage;

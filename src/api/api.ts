@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IList } from "./type";
+import { IList } from "../utils/type";
 
 export async function getList() {
   const { data } = await axios.get("http://localhost:3001/list");
