@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { projectId } from "src/recoil/project";
 import { KEY_PROJECT } from "src/utils/queryKey";
-import { getProjectId } from "../api/api";
-import { FIRST_PAGE_PATH, SECOND_PAGE_PATH } from "../Router";
 import { FirstList, InputData, SecondList } from "src/component";
+import { FIRST_PAGE_PATH, SECOND_PAGE_PATH } from "src/Router";
+import { getProjectId } from "src/api";
 
 const routerPath = [
   {
