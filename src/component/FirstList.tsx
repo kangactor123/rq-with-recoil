@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { getList, postPersonInList } from "src/api";
 import { IList } from "src/utils/type";
 import { KEY_LIST } from "src/utils/queryKey";
-import { MAIN_PAGE_PATH } from "src/Router";
+import { MAIN_PAGE_PATH } from "src/utils/routePath";
 
 export const Wrapper = styled.div``;
 
