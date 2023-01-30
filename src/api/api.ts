@@ -21,6 +21,15 @@ export async function getProjectId() {
   return id;
 }
 
+export async function getUserProfile() {
+  const { data } = await axios.get("http://localhost:3001/profile");
+  return data;
+}
+
+export async function patchUpdateLike(like: number) {
+  return axios.patch("http://localhost:3001/profile1", { like });
+}
+
 export const patchProjectId = (id: number) => {
   return axios.patch("http://localhost:3001/project", { id });
 };

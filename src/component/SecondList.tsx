@@ -1,8 +1,8 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { Link, useLocation } from "react-router-dom";
 import { getList, postPersonInList } from "src/api";
-import { MAIN_PAGE_PATH } from "src/Router";
 import { KEY_LIST } from "src/utils/queryKey";
+import { MAIN_PAGE_PATH } from "src/utils/routePath";
 import { IList } from "src/utils/type";
 
 function SecondList() {
