@@ -10,6 +10,8 @@ type IProfile = {
   comment: string;
 };
 
+// 낙관적 업데이트
+// 좋아요나 댓글 업로드 같은 에러가 나도 크리티컬 하지 않는 요청에 한해서 사용
 function OptimisticUpdate() {
   const queryClient = useQueryClient();
   const { data } = useQuery<IProfile>(KEY_PROFILE, getUserProfile);
@@ -28,6 +30,7 @@ function OptimisticUpdate() {
       }
     },
     onError: () => {
+      // 에러가 날 시 낙관적 업데이트가 된 부분을 원복해주는 로직
       const prevLike = queryClient.getQueryData<IProfile>(KEY_PROFILE);
 
       if (prevLike) {
