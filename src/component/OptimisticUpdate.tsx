@@ -15,6 +15,7 @@ function OptimisticUpdate() {
   const { data } = useQuery<IProfile>(KEY_PROFILE, getUserProfile);
   const { mutate } = useMutation(patchUpdateLike, {
     onMutate: async () => {
+      // 쿼리의 중복 실행이나 예상치 못한 패칭으로 사용자가 잘못된 데이터를 보는 것을 방지하기 위한 cancelQueries
       await queryClient.cancelQueries({ queryKey: KEY_PROFILE });
       const prevLike = queryClient.getQueryData<IProfile>(KEY_PROFILE);
 
