@@ -117,6 +117,10 @@ server.listen(port, () => {
 npm start
 ```
 
+### db.json
+
+- json-server 을 구동하면서 예시로 사용했던 데이터는 `db.json` 파일에 담겨있습니다!
+
 ## What is this App?
 
 - React-Query 와 Recoil 의 접목
