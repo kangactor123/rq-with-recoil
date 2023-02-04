@@ -1,8 +1,6 @@
-## Blog
+## Blog: <a href="https://tech.osci.kr/2022/07/13/react-query/">React-Query 도입을 위한 고민 (feat. Recoil)</a>
 
 <img src="https://user-images.githubusercontent.com/82820237/216752487-52cf59e8-0a5e-4640-8235-0f15abe20ba4.png" alt="blog 배너">
-<a href="https://tech.osci.kr/2022/07/13/react-query/">React-Query 도입을 위한 고민 (feat. Recoil)</a>
-
 <p>>> 해당 글은 react-query 3.39.1 버전을 기준으로 작성된 글입니다.</p>
 <p>>> 지난 7월에 포스팅 한 이후로 15000회 이상의 조회수를 기록했습니다. 많은 관심을 주셔서 감사합니다!</p>
 
