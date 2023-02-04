@@ -1,5 +1,6 @@
 # Blog
 
+<img src="https://user-images.githubusercontent.com/82820237/216752428-bd716404-7ed3-4ae2-8ca3-a5d2366c2653.png" alt="blog 배너">
 <a href="https://tech.osci.kr/2022/07/13/react-query/">React-Query 도입을 위한 고민 (feat. Recoil)</a>
 
 <p>>> 해당 글은 react-query 3.39.1 버전을 기준으로 작성된 글입니다.</p>
@@ -7,15 +8,18 @@
 # Tech
 
 - React with Typescript
-- React-Query
+- @tanstack/react-query
 - Recoil
 - 스타일을 위한 styled-components (사실 여기엔 의미없음..)
 
 ```
 npm install recoil
-npm install react-query
+npm install @tanstack/react-query
 npm install styled-components
 npm i --save-dev @types/styled-components
+
+yarn add recoil @tanstack/react-query styled-components
+yarn add @types/styled-components --dev
 ```
 
 # React Query v4 update
@@ -26,11 +30,18 @@ yarn add @tanstack/react-query
 yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-client
 ```
 
-## 레포지토리 변경점 (2022-12-31 기준)
+## 레포지토리 변경점
+
+### (2022-12-31 기준)
 
 - 패키지가 react-query 에서 @tanstack/react-query 로 변경되었습니다.
 - 기존의 persist 를 위한 플러그인이 실험모드 에서 안정화 모드의 플러그인으로 변경되었습니다.
   <a href="https://tanstack.com/query/v4/docs/react/plugins/createSyncStoragePersister">>플러그인 문서</a>
+
+### (2023-02-04 기준)
+
+- 폴더의 구조를 변경했습니다.
+- 낙관적 업데이트와 무한 스크롤을 구현한 예제가 추가되었습니다.
 
 ## 사전환경설정
 
@@ -60,21 +71,7 @@ npm install json-server --save-dev
       "age": "28",
       "id": 1656479756161
     },
-    {
-      "name": "dy",
-      "age": "29",
-      "id": 1656479756162
-    },
-    {
-      "name": "bi",
-      "age": "34",
-      "id": 1656479756163
-    },
-    {
-      "name": "zzz",
-      "age": "222",
-      "id": 1656483746312
-    }
+    ...
   ]
 }
 ```
@@ -144,3 +141,12 @@ npm start
 
 - 낙관적 업데이트 (Optimistic Update) 에 관한 연습은 component > `OptimisticUpdate.tsx` 에서 확인하실 수 있습니다.
 - 컨셉을 이해해서 연습해본 예제입니다.
+
+## 레포지토리의 구성 -4
+
+- 무한 스크롤 (Infinite Scroll) 에 관한 연습은 component > `InfiniteScroll.tsx` 에서 확인하실 수 있습니다.
+- 무한 스크롤을 구현하기 위하여 `useInfiniteQuery` 훅과 IntersectionObserver API 를 사용했습니다.
+- 컨셉을 이해해서 연습해본 예제입니다.
+- json-server 에 queryParam 을 넘기는데에 어려움이 있어 github open API 를 활용했습니다.
+- 타 블로그 포스팅의 도움을 받아 작성된 예제입니다.
+- <a href="https://velog.io/@wmc1415/react-query%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-infinity-scroll-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0">바로가기></a>
