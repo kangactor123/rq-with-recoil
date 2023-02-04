@@ -36,5 +36,7 @@
     "like": 1,
     "comment": "comment..."
   },
-  "project": 1
+  "project": {
+    "id": 1
+  }
 }
