@@ -1,11 +1,12 @@
-# Blog
+## Blog
 
-<img src="https://user-images.githubusercontent.com/82820237/216752428-bd716404-7ed3-4ae2-8ca3-a5d2366c2653.png" alt="blog 배너">
+<img src="https://user-images.githubusercontent.com/82820237/216752487-52cf59e8-0a5e-4640-8235-0f15abe20ba4.png" alt="blog 배너">
 <a href="https://tech.osci.kr/2022/07/13/react-query/">React-Query 도입을 위한 고민 (feat. Recoil)</a>
 
 <p>>> 해당 글은 react-query 3.39.1 버전을 기준으로 작성된 글입니다.</p>
+<p>>> 지난 7월에 포스팅 한 이후로 15000회 이상의 조회수를 기록했습니다. 많은 관심을 주셔서 감사합니다!</p>
 
-# Tech
+## Tech
 
 - React with Typescript
 - @tanstack/react-query
@@ -22,7 +23,7 @@ yarn add recoil @tanstack/react-query styled-components
 yarn add @types/styled-components --dev
 ```
 
-# React Query v4 update
+## React Query v4 update
 
 ```
 yarn remove react-query
@@ -122,27 +123,30 @@ npm start
 
 - React-Query 와 Recoil 을 함께 사용하는 방법을 연습한 Repo
 
-## 레포지토리의 구성 - 1
+### 레포지토리의 구성 - 1
 
 - FirstList 와 SecondList 컴포넌트는 같은 key를 갖은 쿼리를 바라보고 있습니다.
 - 버튼을 클릭 시 데이터가 add 됩니다.
 - 데이터 add 시 FirstList 는 invalidateQuries 메서드로 인해서 주어진 키값의 쿼리를 refetch 합니다.
 - 쿼리를 리패치 해오기에 같은 키를 바라보고 있는 SecondList 의 list 도 업데이트 됩니다.
+  <br/>
 
-## 레포지토리의 구성 - 2
+### 레포지토리의 구성 - 2
 
 - 서버에서 가져온 데이터를 클라이언트의 전역 상태로 관리해야 할 경우
 - InputData 컴포넌트에서 데이터를 입력받아서 서버에 patch 합니다.
 - 데이터 patch 성공 시, useMutation 훅의 options 의 onSuccess 프로퍼티에서 프로젝트 아이디를 다시 패칭해오도록 콜백함수를 넣어줍니다.
 - mutation 함수에서 isSuccess 를 리턴받아, 성공할 경우 atom 에 상태값을 저장하도록 set
 - atom 에는 effect 를 통해 localStorage 와 연동해놨기 때문에, 아톰에 값이 저장된 경우에 localStorage 에 값이 저장된 걸 확인할 수 있음
+  <br/>
 
-## 레포지토리의 구성 -3
+### 레포지토리의 구성 -3
 
 - 낙관적 업데이트 (Optimistic Update) 에 관한 연습은 component > `OptimisticUpdate.tsx` 에서 확인하실 수 있습니다.
 - 컨셉을 이해해서 연습해본 예제입니다.
+  <br/>
 
-## 레포지토리의 구성 -4
+### 레포지토리의 구성 -4
 
 - 무한 스크롤 (Infinite Scroll) 에 관한 연습은 component > `InfiniteScroll.tsx` 에서 확인하실 수 있습니다.
 - 무한 스크롤을 구현하기 위하여 `useInfiniteQuery` 훅과 IntersectionObserver API 를 사용했습니다.
