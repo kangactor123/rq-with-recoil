@@ -3,6 +3,7 @@
 <img src="https://user-images.githubusercontent.com/82820237/216752487-52cf59e8-0a5e-4640-8235-0f15abe20ba4.png" alt="blog 배너">
 <p>>> 해당 글은 react-query 3.39.1 버전을 기준으로 작성된 글입니다.</p>
 <p>>> 지난 7월에 포스팅 한 이후로 15000회 이상의 조회수를 기록했습니다. 많은 관심을 주셔서 감사합니다!</p>
+<br/>
 
 ## Tech
 
@@ -21,6 +22,8 @@ yarn add recoil @tanstack/react-query styled-components
 yarn add @types/styled-components --dev
 ```
 
+<br/>
+
 ## React Query v4 update
 
 ```
@@ -28,6 +31,8 @@ yarn remove react-query
 yarn add @tanstack/react-query
 yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-client
 ```
+
+<br/>
 
 ## 레포지토리 변경점
 
@@ -41,6 +46,8 @@ yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-cl
 
 - 폴더의 구조를 변경했습니다.
 - 낙관적 업데이트와 무한 스크롤을 구현한 예제가 추가되었습니다.
+
+<br/>
 
 ## 사전환경설정
 
@@ -116,6 +123,8 @@ npm start
 ### db.json
 
 - json-server 을 구동하면서 예시로 사용했던 데이터는 `db.json` 파일에 담겨있습니다!
+
+<br/>
 
 ## What is this Repo?
 
