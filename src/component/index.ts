@@ -1,6 +1,6 @@
-import FirstList from "./FirstList";
+import FirstList from "./QueryMutation";
 import InputData from "./InputData";
-import SecondList from "./SecondList";
+import SecondList from "./Routing";
 import OptimisticUpdate from "./OptimisticUpdate";
 import InfiniteScroll from "./InfiniteScroll";
 
