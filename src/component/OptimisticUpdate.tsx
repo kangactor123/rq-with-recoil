@@ -48,6 +48,7 @@ function OptimisticUpdate() {
       mutate(like);
     }
   };
+
   return (
     <div>
       <div>{data?.name}</div>
