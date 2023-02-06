@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IList } from "../utils/type";
+import { IList, IRepository } from "../utils/type";
 
 export async function getList() {
   const { data } = await axios.get("http://localhost:3001/list");
@@ -33,3 +33,11 @@ export async function patchUpdateLike(like: number) {
 export const patchProjectId = (id: number) => {
   return axios.patch("http://localhost:3001/project", { id });
 };
+
+export async function fetchRepositories(page: number) {
+  return await axios
+    .get<IRepository>(
+      `https://api.github.com/search/repositories?q=topic:reactjs&per_page=30&page=${page}`
+    )
+    .then((resp) => resp.data);
+}

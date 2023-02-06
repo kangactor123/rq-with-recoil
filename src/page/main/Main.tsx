@@ -8,6 +8,7 @@ import { FirstList, InputData, SecondList } from "src/component";
 import { getProjectId } from "src/api";
 import {
   FIRST_PAGE_PATH,
+  INFINITY_SCROLL_PATH,
   OPTIMISTIC_UPDATE_PAGE_PATH,
   SECOND_PAGE_PATH,
 } from "src/utils/routePath";
@@ -29,19 +30,23 @@ const routerPath = [
     path: OPTIMISTIC_UPDATE_PAGE_PATH,
     label: "optimistic update page",
   },
+  {
+    path: INFINITY_SCROLL_PATH,
+    label: "Infinity Scroll",
+  },
 ];
 
 function Main() {
   const setProjectId = useSetRecoilState(projectId);
-  // const { data } = useQuery(KEY_PROJECT, getProjectId, {
-  //   onSuccess: (data) => {
-  //     setProjectId(data);
-  //   },
-  // });
+  const { data } = useQuery(KEY_PROJECT, getProjectId, {
+    onSuccess: (data) => {
+      setProjectId(data);
+    },
+  });
 
   return (
     <div>
-      {/* <h1>ProjectId is {data ?? "null"}</h1> */}
+      <h1>ProjectId is {data ?? "null"}</h1>
       <FirstList />
       <SecondList />
       <InputData />

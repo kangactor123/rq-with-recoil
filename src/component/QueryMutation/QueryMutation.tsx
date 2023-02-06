@@ -11,7 +11,7 @@ export const Wrapper = styled.div``;
 // invalidateQueries : QueryClient 에서 제공하는 메서드로, 주어지는 키에 매칭되는 쿼리를 stale 한 상태로 만들어서 리패칭 하게 하는 메서드
 // 기본적으로 키를 제공했을 경우 배열속에 같은 키가 들어있다면 매칭되는 모든 쿼리들이 stale 하게 상태가 변화됨
 // { exact: true } 옵션을 넣어주면 정확히 매칭이 가능.
-function FirstList() {
+function QueryMutation() {
   const location = useLocation();
   const queryClient = useQueryClient();
 
@@ -66,4 +66,4 @@ function FirstList() {
   );
 }
 
-export default FirstList;
+export default QueryMutation;

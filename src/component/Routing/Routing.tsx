@@ -5,7 +5,7 @@ import { KEY_LIST } from "src/utils/queryKey";
 import { MAIN_PAGE_PATH } from "src/utils/routePath";
 import { IList } from "src/utils/type";
 
-function SecondList() {
+function Routing() {
   const location = useLocation();
   const { data, isLoading, isError } = useQuery<IList[]>([KEY_LIST], getList);
   const { mutate, isError: isMutateError } = useMutation(postPersonInList);
@@ -39,4 +39,4 @@ function SecondList() {
   );
 }
 
-export default SecondList;
+export default Routing;
