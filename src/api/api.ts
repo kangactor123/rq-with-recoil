@@ -1,4 +1,5 @@
 import axios from "axios";
+import { TForm } from "src/component/Form";
 import { IList, IRepository } from "../utils/type";
 
 export async function getList() {
@@ -40,4 +41,9 @@ export async function fetchRepositories(page: number) {
       `https://api.github.com/search/repositories?q=topic:reactjs&per_page=30&page=${page}`
     )
     .then((resp) => resp.data);
+}
+
+export async function getFormData() {
+  const { data } = await axios.get("http://localhost:3001/form");
+  return data;
 }

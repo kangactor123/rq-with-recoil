@@ -8,6 +8,7 @@ import { FirstList, InputData, SecondList } from "src/component";
 import { getProjectId } from "src/api";
 import {
   FIRST_PAGE_PATH,
+  FORM_PATH,
   INFINITY_SCROLL_PATH,
   OPTIMISTIC_UPDATE_PAGE_PATH,
   SECOND_PAGE_PATH,
@@ -33,6 +34,10 @@ const routerPath = [
   {
     path: INFINITY_SCROLL_PATH,
     label: "Infinity Scroll",
+  },
+  {
+    path: FORM_PATH,
+    label: "Edit Form",
   },
 ];
 

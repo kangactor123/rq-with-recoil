@@ -5,10 +5,12 @@ import FirstPage from "./page/firstPage";
 import SecondPage from "./page/secondPage";
 import {
   FIRST_PAGE_PATH,
+  FORM_PATH,
   INFINITY_SCROLL_PATH,
   OPTIMISTIC_UPDATE_PAGE_PATH,
   SECOND_PAGE_PATH,
 } from "./utils/routePath";
+import Form from "./component/Form";
 
 function Router() {
   return (
@@ -21,6 +23,7 @@ function Router() {
           path={OPTIMISTIC_UPDATE_PAGE_PATH}
         />
         <Route element={<InfiniteScroll />} path={INFINITY_SCROLL_PATH} />
+        <Route element={<Form />} path={FORM_PATH} />
         <Route element={<Main />} path="/" />
       </Routes>
     </BrowserRouter>
