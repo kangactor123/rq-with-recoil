@@ -10,7 +10,8 @@
 - React with Typescript
 - @tanstack/react-query
 - Recoil
-- 스타일을 위한 styled-components (사실 여기엔 의미없음..)
+- react-hook-form (Form 에 데이터를 주입시키는 예제를 위해 설치)
+- styled-components (간단한 위해 설치)
 
 ```
 npm install recoil
@@ -161,3 +162,10 @@ npm start
 - json-server 에 queryParam 을 넘기는데에 어려움이 있어 github open API 를 활용했습니다.
 - 타 블로그 포스팅의 도움을 받아 작성된 예제입니다.
 - <a href="https://velog.io/@wmc1415/react-query%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-infinity-scroll-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0">바로가기></a>
+
+### 레포지토리의 구성 -5
+
+- Form 과 react-hook-form 을 함께 활용하는 방법에 대한 예제를 작성했습니다
+- `src > component > Form > Form.tsx` 에서 확인하실 수 있습니다.
+- react-hook-form 에 관한 포스팅을 통해서 참고하시면 좋습니다.
+- <a href="https://tech.osci.kr/2023/01/09/react-hook-form-series-3/">바로가기></a>
