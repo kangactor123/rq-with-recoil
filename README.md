@@ -50,6 +50,13 @@ yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-cl
 
 <br/>
 
+### (2023-02-10 기준)
+
+- Form 관련 예제를 추가하였습니다.
+- Form 은 react-hook-form 을 활용하였으며, Form 을 다룰때 react-query 를 어떻게 접근해야 할 지 담아봤습니다.
+
+<br/>
+
 ## 사전환경설정
 
 - 해당 앱은 간단히 JSON.server 을 띄어서 테스트 했습니다.
@@ -166,6 +173,6 @@ npm start
 ### 레포지토리의 구성 -5
 
 - Form 과 react-hook-form 을 함께 활용하는 방법에 대한 예제를 작성했습니다
-- `src > component > Form > Form.tsx` 에서 확인하실 수 있습니다.
+- `src > component > Form > EditForm.tsx` 에서 확인하실 수 있습니다.
 - react-hook-form 에 관한 포스팅을 통해서 참고하시면 좋습니다.
 - <a href="https://tech.osci.kr/2023/01/09/react-hook-form-series-3/">바로가기></a>
