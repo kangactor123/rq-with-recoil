@@ -118,3 +118,9 @@ export interface IRepository {
   incomplete_results: boolean;
   items: Item[];
 }
+
+export type TForm = {
+  id: string;
+  name: string;
+  nickname: string;
+};
