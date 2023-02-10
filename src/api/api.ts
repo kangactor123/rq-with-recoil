@@ -1,6 +1,5 @@
 import axios from "axios";
-import { TForm } from "src/component/Form";
-import { IList, IRepository } from "../utils/type";
+import { IList, IRepository, TForm } from "../utils/type";
 
 export async function getList() {
   const { data } = await axios.get("http://localhost:3001/list");
@@ -46,4 +45,8 @@ export async function fetchRepositories(page: number) {
 export async function getFormData() {
   const { data } = await axios.get("http://localhost:3001/form");
   return data;
+}
+
+export async function postFormData(request: TForm) {
+  return await axios.post("http://localhost:3001/form", request);
 }
