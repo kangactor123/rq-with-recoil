@@ -1,7 +1,7 @@
-import FirstList from "./QueryMutation";
+import QueryMutation from "./QueryMutation";
 import InputData from "./InputData";
-import SecondList from "./Routing";
+import Routing from "./Routing";
 import OptimisticUpdate from "./OptimisticUpdate";
 import InfiniteScroll from "./InfiniteScroll";
 
-export { FirstList, InputData, SecondList, OptimisticUpdate, InfiniteScroll };
+export { QueryMutation, InputData, Routing, OptimisticUpdate, InfiniteScroll };

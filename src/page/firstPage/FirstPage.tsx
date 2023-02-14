@@ -1,7 +1,7 @@
-import { FirstList } from "src/component";
+import { QueryMutation } from "src/component";
 
 function FirstPage() {
-  return <FirstList />;
+  return <QueryMutation />;
 }
 
 export default FirstPage;

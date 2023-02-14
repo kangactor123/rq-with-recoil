@@ -1,6 +1,6 @@
-import { SecondList } from "src/component";
+import { Routing } from "src/component";
 
 function SecondPage() {
-  return <SecondList />;
+  return <Routing />;
 }
 export default SecondPage;
