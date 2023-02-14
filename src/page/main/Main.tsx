@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { projectId } from "src/recoil/project";
 import { KEY_PROJECT } from "src/utils/queryKey";
-import { FirstList, InputData, SecondList } from "src/component";
+import { InputData, QueryMutation, Routing } from "src/component";
 import { getProjectId } from "src/api";
 import {
   FIRST_PAGE_PATH,
@@ -52,8 +52,8 @@ function Main() {
   return (
     <div>
       <h1>ProjectId is {data ?? "null"}</h1>
-      <FirstList />
-      <SecondList />
+      <QueryMutation />
+      <Routing />
       <InputData />
       <div>
         {routerPath.map(({ path, label }) => (
