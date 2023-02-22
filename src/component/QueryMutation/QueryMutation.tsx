@@ -5,6 +5,7 @@ import { getList, postPersonInList } from "src/api";
 import { IList } from "src/utils/type";
 import { KEY_LIST } from "src/utils/queryKey";
 import { MAIN_PAGE_PATH } from "src/utils/routePath";
+import { useEffect, useState } from "react";
 
 export const Wrapper = styled.div``;
 
@@ -16,15 +17,22 @@ function QueryMutation() {
   const queryClient = useQueryClient();
 
   // const { data, isLoading } = useQuery<IList[], Error, number>( // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
-  const { data, isLoading } = useQuery<IList[], Error>( // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
-    KEY_LIST,
-    getList
-    // {
-    //   select: (data) => {
-    //     return data.length;
-    //   },
-    // }
-  );
+  const [enabled, setEnabled] = useState(true);
+  const { data, isLoading } = useQuery<IList[], Error>(KEY_LIST, getList, {
+    // 세 번째 제네릭 타입으로 select 의 리턴되는 타입을 지정해줄 수 있음
+    // select: () => {
+    //   return [];
+    // },
+    refetchInterval: 500,
+    enabled,
+  });
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setEnabled((prev) => !prev);
+    }, 5000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const { mutate, isError: isMutateError } = useMutation(postPersonInList, {
     onSuccess: () => {
