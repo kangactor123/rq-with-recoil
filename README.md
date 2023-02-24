@@ -48,7 +48,6 @@ yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-cl
 - 폴더의 구조를 변경했습니다.
 - 낙관적 업데이트와 무한 스크롤을 구현한 예제가 추가되었습니다.
 
-<br/>
 
 ### (2023-02-10 기준)
 
