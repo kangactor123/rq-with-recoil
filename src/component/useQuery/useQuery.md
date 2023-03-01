@@ -1,3 +1,5 @@
+# useQuery
+
 ```
 const {
   data,
@@ -58,7 +60,7 @@ const {
 
 # useQuery 의 매개변수 options
 
-## 자주 사용되는 option 값을 위주로 나열했습니다.
+- 자주 사용되는 option 값을 위주로 나열했습니다.
 
 ### queryKey
 
@@ -173,10 +175,11 @@ const {
 - TData/(): TData
 - 해당 값을 넣어줄 경우 해당 쿼리가 loading 인 상태이거나, initialData 를 넣어주지 않는 경우에 쿼리의 데이터로 제공됩니다.
 - initialData 와는 다르게 캐싱되지 않습니다.
+  <br/>
 
 # useQuery 의 return 객체
 
-## 자주 사용되는 property 위주로 나열했습니다.
+- 자주 사용되는 property 위주로 나열했습니다.
 
 ### status
 
