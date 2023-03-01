@@ -23,10 +23,11 @@ function QueryMutation() {
     // select: () => {
     //   return [];
     // },
-    refetchInterval: 500,
+    refetchInterval: 500, // 주기적 패칭 (폴링을 구현할 수 있음) 을 원할때
     enabled,
   });
 
+  // 특정 시간 도달 시 enabled 를 false 하여 주기적인 패칭을 멈추게 함
   useEffect(() => {
     const timeout = setTimeout(() => {
       setEnabled((prev) => !prev);
