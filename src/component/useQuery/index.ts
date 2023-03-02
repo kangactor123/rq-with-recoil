@@ -1,2 +1,2 @@
-export { default } from "./InputData";
-export * from "./InputData";
+export { default } from "./Query";
+export * from "./Query";
