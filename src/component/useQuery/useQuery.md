@@ -180,6 +180,7 @@ const {
 # useQuery 의 return 객체
 
 - 자주 사용되는 property 위주로 나열했습니다.
+  <br/>
 
 ### status
 
@@ -187,6 +188,7 @@ const {
 - loading: 캐싱된 데이터가 없거나, 쿼리가 아직 실행되지 않은 상태
 - error: 쿼리가 에러를 반환한 경우
 - success: 쿼리가 성공적으로 데이터를 반환한 경우
+  <br/>
 
 ## 아래 상태값은 boolean 값 입니다.
 
@@ -217,6 +219,8 @@ const {
 ### isRefetching
 
 ### isInitialLoading
+
+<br/>
 
 ## data/error/refetch
 
