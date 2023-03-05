@@ -1,5 +1,5 @@
 import Routing from "./Routing";
-import OptimisticUpdate from "./useMutation/OptimisticUpdate";
+import OptimisticUpdate from "./useMutate/OptimisticUpdate";
 import InfiniteScroll from "./InfiniteScroll";
 
 export { Routing, OptimisticUpdate, InfiniteScroll };

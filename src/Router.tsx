@@ -10,7 +10,7 @@ import {
   OPTIMISTIC_UPDATE_PAGE_PATH,
   SECOND_PAGE_PATH,
 } from "./utils/routePath";
-import EditForm from "./component/useMutation/Form";
+import EditForm from "./component/useMutate/Form";
 import Form from "./page/form";
 import { InfiniteScroll, OptimisticUpdate } from "./component";
 
