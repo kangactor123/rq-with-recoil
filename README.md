@@ -58,6 +58,7 @@ yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-cl
 - @tanstack/react-query 의 각 훅들과 기능에 대한 예제와 md 파일을 작성하기 시작했습니다.
 - src > components 에서 확인하실 수 있습니다.
 - useQuery 완료!
+- useMutate 완료 !
 
 <br/>
 
@@ -144,6 +145,7 @@ npm start
 
 ### 레포지토리의 구성 - 1
 
+- deprecated
 - FirstList 와 SecondList 컴포넌트는 같은 key를 갖은 쿼리를 바라보고 있습니다.
 - 버튼을 클릭 시 데이터가 add 됩니다.
 - 데이터 add 시 FirstList 는 invalidateQuries 메서드로 인해서 주어진 키값의 쿼리를 refetch 합니다.
@@ -161,7 +163,7 @@ npm start
 
 ### 레포지토리의 구성 -3
 
-- 낙관적 업데이트 (Optimistic Update) 에 관한 연습은 component > `OptimisticUpdate.tsx` 에서 확인하실 수 있습니다.
+- 낙관적 업데이트 (Optimistic Update) 에 관한 연습은 component > useMutate > `OptimisticUpdate.tsx` 에서 확인하실 수 있습니다.
 - 컨셉을 이해해서 연습해본 예제입니다.
   <br/>
 
@@ -177,6 +179,6 @@ npm start
 ### 레포지토리의 구성 -5
 
 - Form 과 react-hook-form 을 함께 활용하는 방법에 대한 예제를 작성했습니다
-- `src > component > Form > EditForm.tsx` 에서 확인하실 수 있습니다.
+- `src > component > useMutate > Form > EditForm.tsx` 에서 확인하실 수 있습니다.
 - react-hook-form 에 관한 포스팅을 통해서 참고하시면 좋습니다.
 - <a href="https://tech.osci.kr/2023/01/09/react-hook-form-series-3/">바로가기></a>
