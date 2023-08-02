@@ -1,4 +1,4 @@
-## Blog: <a href="https://tech.osci.kr/2022/07/13/react-query/">React-Query 도입을 위한 고민 (feat. Recoil)</a>
+## Blog: <a href="https://tech.osci.kr/react-query/" target="_blank">React-Query 도입을 위한 고민 (feat. Recoil)</a>
 
 <img src="https://user-images.githubusercontent.com/82820237/216752487-52cf59e8-0a5e-4640-8235-0f15abe20ba4.png" alt="blog 배너">
 <p>>> 해당 글은 react-query 3.39.1 버전을 기준으로 작성된 글입니다.</p>
