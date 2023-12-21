@@ -36,6 +36,12 @@ yarn add @tanstack/query-sync-storage-persister @tanstack/react-query-persist-cl
 
 <br/>
 
+## Major v5 등장
+- 메이저 버전이 업그레이드 됐습니다. 여러가지 breaking change 가 있습니다.
+- useQuery, useMutation 등 훅에서 받는 파라미터가 객체로 변경됐습니다.
+- useQuery 의 콜백함수가 제거됐습니다. 해당 콜백이 여러 케이스에서 버그가 있었고 일관성을 위해서 삭제했다고 하는데요, 콜백에서 사용했던 로직을 v5에서 사용하는 방법을 찾아보겠습니다.
+- https://github.com/TanStack/query/discussions/5279
+
 ## 레포지토리 변경점
 
 ### (2022-12-31 기준)
