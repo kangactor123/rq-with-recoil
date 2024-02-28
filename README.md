@@ -11,7 +11,7 @@
 - @tanstack/react-query
 - Recoil
 - react-hook-form (Form 에 데이터를 주입시키는 예제를 위해 설치)
-- styled-components (간단한 위해 설치)
+- styled-components (간단한 스타일링을 위해 설치)
 
 ```
 npm install recoil
